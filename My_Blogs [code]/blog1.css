@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#wrapper{
+    min-height:100vh;
+    max-width:95.50vw;
+    overflow-x: hidden;
+}
+
+header{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 1rem;
+}
+
+header>a{
+    color: #808080;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-self: start;
+    align-self: center;
+}
+
+header>h1{
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: underline;
+    justify-self: center;
+    align-self: center;
+}
+
+header>img{
+    height: 30px;
+    width: 30px;
+    justify-self: end;
+    align-self: center;
+    padding-right: 20px;
+}
+
+#container{
+    margin: 1rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 19%;
+    column-gap: 1em;
+}
+
+#heading{
+    font-size: 3rem;
+}
+
+
+#container p,ul,ol,a{
+    font-size: 1rem;
+    font-family: Poppins,serif;
+}
+
+main p,hr{
+    margin-bottom: 1rem;
+}
+ul+p{
+    margin-top: 1rem;
+}
+ol+p{
+    margin-top: 1rem;
+}
+
+#heading2{
+    font-size: 2rem;
+}
+
+#heading3{
+    font-size: 1.5rem;
+}
+#border_wala_text{
+    border: 1px solid black;
+}
+ul,ol{
+    margin-left: 2rem;
+}
+
+.post_link{
+    border-radius: 1.3em;
+    text-decoration: none;
+    padding: 0.1em 0.4em;
+}
+
+#post_link1{
+    border: 1px solid rgba(0, 0, 255, 0.582);
+}
+
+#post_link2{
+    border: 1px solid gray;
+    color: #808080;
+    margin-left: 4px;
+}
+
+#about{
+    padding: 1rem;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.096);
+    border-radius: 0.5em;
+}
+
+#sidebar{
+    display: grid;
+    align-content: start;
+    row-gap: 1rem;
+}
+
+#sidebar h2{
+    font-style: italic;
+}
+
+@media(max-width:650px){
+    header>h1{
+        font-size: 22.4px;
+    }
+    header>img{
+        height: 15px;
+        width: 15px;
+    }
+    header>a{
+        font-size: 0.5rem;
+    }
+    #container{
+        grid-template-columns: 1fr;
+    }   
+    #sidebar{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: 
+        "about archives"
+        "none else_where";
+    }
+    #about{
+        grid-area: about;
+        width: 80%;
+    }
+    #archives{
+        grid-area: archives;
+    }
+    #else_where{
+        grid-area: else_where;
+    }
+}
+
+@media (max-width:500px){
+    #sidebar{
+        grid-template-areas: 
+        "about"
+        "archives"
+        "else_where"
+        "none";
+    }
+    header>h1{
+        font-size: 1rem;
+    }
+    header>img{
+        height: 9px;
+        width: 9px;
+    }
+    header>a{
+        font-size: 0.5rem;
+    }
+}

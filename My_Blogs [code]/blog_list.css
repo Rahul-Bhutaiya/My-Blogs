@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper{
+    min-height: 100vh;
+    max-width: 96.50vw;
+    overflow-x: hidden;
+    margin: 1rem;
+    
+}
+
+header{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+header>a{
+    color: #808080;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-self: start;
+    align-self: center;
+}
+
+header>h1{
+    font-size: 3rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: underline;
+    justify-self: center;
+    align-self: center;
+}
+
+header>img{
+    height: 21px;
+    width: 21px;
+    justify-self: end;
+    align-self: center;
+}
+
+main{
+    display: grid;
+    justify-content: center;
+    margin-top: 2rem;
+    grid-template-columns: repeat(2,400px);
+    grid-template-rows: repeat(3,240px);
+    grid-gap: 2rem 1rem;
+
+    grid-template-areas: 
+    "world1 design1"
+    "world2 design2"
+    "world3 design3";
+}
+
+.box{
+    border: 6px solid rgba(128, 128, 128, 0.233);
+    padding: 1rem;
+    position: relative;
+}
+.box:hover{
+    border: 1px solid rgba(128, 128, 128, 0.233);
+    border-radius: 0.4em;
+    transition: 0.2s;
+}
+
+.title{
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 9.6px 0px;
+    font-weight: 600;
+}
+
+.box>h2{
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.date{
+    font-size: 14.4px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #808080;
+}
+
+.desc{
+    font-size: 14.4px;
+    margin-top: 0.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.box>a{
+    position: absolute;
+    bottom: 16px;
+    color: #0299FD;
+}
+
+.world>.title{
+    color: #0299FD;
+}
+
+.design>.title{
+    color: #008000;
+}
+
+#world1{
+    grid-area: world1;
+}
+#world2{
+    grid-area: world2;
+}
+#world3{
+    grid-area: world3;
+}
+
+#design1{
+    grid-area: design1;
+}
+#design2{
+    grid-area: design2;
+}
+#design3{
+    grid-area: design3;
+}
+
+@media (min-width:530px) and (max-width:1100px){
+    main{
+        grid-template-columns: repeat(2,240px);
+        grid-template-rows: repeat(3,240px);
+    }    
+    .title{
+        font-size: 9.6px;
+        margin: 5.76px 0px;
+    }   
+    .box{
+        border: 4px solid rgba(128, 128, 128, 0.233);
+    }
+    .box>h2{
+        font-size: 1.5rem;
+    }
+    .date{
+        font-size: 12.8px;
+    }
+    .box>a{
+        font-size: 12.8px;
+    }
+    header>img{
+        height: 9px;
+        width: 9px;
+    }
+    header>h1{
+        font-size: 1.5rem;
+    }
+    header>a{
+        font-size: 0.5rem;
+    }
+}
+@media(max-width:529px){
+    header>img{
+        height: 15px;
+        width: 15px;
+    }
+    header>h1{
+        font-size: 22.4px;
+    }
+    header>a{
+        font-size: 0.5rem;
+    }
+    main{
+        grid-template-columns: minmax(100px,400px);
+        /* grid-template-rows: minmax(200px 500px); */
+        
+        grid-template-areas: 
+        "world1"
+        "world2"
+        "world3"
+        "design1"
+        "design2"
+        "design3";
+    }    
+    .title{
+        font-size: 16px;
+        margin: 9.6px 0px;
+    }   
+    .box{
+        border: 4px solid rgba(128, 128, 128, 0.233);
+        overflow-y: auto;
+    }
+    .box>h2{
+        font-size: 1.5rem;
+    }
+    .date{
+        font-size: 1rem;
+    }
+    .box>a{
+        font-size: 1rem;
+    }
+    .desc{
+        font-size: 1rem;
+    }
+    .box>a{
+        position: relative;
+        top: 55px;
+        color: #0299FD;
+    }
+}
